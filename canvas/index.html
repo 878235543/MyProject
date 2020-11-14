@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .container{
+            margin: 30px;
+        }
+        #cavs{
+            border:1px solid red;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .6);
+            border-radius: 10px;
+        }
+        .container ul{
+            margin-top: 20px;
+            width: 700px;
+            text-align: center;
+        }
+        .container ul li{
+            display: inline-block;
+            margin-left: 35px;
+        }
+        .container ul li input{
+            padding: 6px 15px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: box-shadow  0.3 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .container ul li:nth-child(5) input{
+            vertical-align: bottom;
+        }
+
+        .container ul li input:hover{
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="cavs" width="700" height="330"></canvas>
+        <ul>
+            <li><input type="color" id="color"></li>
+            <li><input type="button" id="clean" value="清屏"></li>
+            <li><input type="button" id="eraser" value="橡皮"></li>
+            <li><input type="button" id="rescind" value="撤销"></li>
+            <li><input type="range" id="linRuler" min=1 max=20></li>
+        </ul>
+    </div>
+</body>
+<script>
+    var drawing={
+        cavs:document.getElementById("cavs"),
+        ctx:document.getElementById("cavs").getContext("2d"),//笔触
+        ul_node:document.getElementsByTagName("ul")[0],
+        color:document.getElementById("color"),
+        linRuler:document.getElementById("linRuler"),
+        imgArr:[],  ///存放截图
+        init:function(){
+            this.dring();
+            this.buttonsAll();
+            this.ctx.lineCap="round";  //使线条更圆润
+            this.ctx.lineJoin="round";
+            console.log(cavs);
+        },
+        dring:function(){  //开始画画
+            var self=this;
+            this.cavs.onmousedown=function(e){
+                var left=this.offsetLeft;
+                var top=this.offsetTop;
+                var e_x=e.pageX-this.offsetLeft;
+                var e_y=e.pageY-this.offsetTop;
+                console.log(e_x,e_y);
+                self.ctx.beginPath();  //开始绘制
+                self.ctx.moveTo(e_x,e_y);   //落笔点
+                var img=self.ctx.getImageData(0,0,self.cavs.offsetWidth,self.cavs.offsetHeight);
+                self.imgArr.push(img); //保存截图
+                console.log(self.imgArr);
+
+            document.onmousemove=function(e){   //笔划过
+                self.ctx.lineTo(e.pageX-left,e.pageY-top);
+                self.ctx.stroke();
+                console.log(e.pageX-left,e.pageY-top);
+            },
+            document.onmouseup=function(){   //笔抬起
+                document.onmousemove=null;
+                self.ctx.closePath();
+            }
+            this.onmouseleave=function(){  //如果笔滑出画布外面
+                document.onmousemove=null;
+            }
+            }
+        },
+        //按钮
+        buttonsAll:function(){
+            var self=this;
+            this.ul_node.addEventListener("click",function(e){
+                switch(e.target.id){
+                    case 'clean':  //清屏
+                    self.ctx.clearRect(0,0,self.cavs.offsetWidth,self.cavs.offsetHeight);
+                    break;
+                    case 'eraser': //橡皮
+                    self.ctx.strokeStyle="#FFF";
+                      break;
+                    case 'rescind': //撤销
+                    if(self.imgArr.length>0){
+                        self.ctx.putImageData(self.imgArr.pop(),0,0);   //self.imgArr.pop()是删除数组的最后一个数  然后返回数组  0，0 是把截图放的位置
+                    }
+                   
+                    break;
+                }
+            })
+            this.color.onchange=function(e){
+                self.ctx.strokeStyle=this.value;
+                console.log(this.value);
+            }
+            this.linRuler.onchange=function(){
+                self.ctx.lineWidth=this.value;
+                console.log(this.value);
+
+            }
+        }
+    }
+    drawing.init();
+</script>
+</html>

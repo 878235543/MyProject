@@ -1,0 +1,68 @@
+.swiperWrapper{
+    position: relative;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+.swiperWrapper .domList{
+    height: 100%;
+    background-color:rgba(0, 0, 0, .6);
+    position: absolute;
+    left: 0;
+}
+
+.swiperWrapper .domList::after{
+    content: '';
+    display: inline-block;
+    clear: both;
+}
+.swiperWrapper .spanList{
+    position: absolute;
+    bottom: 10px;
+    width:100%;
+    height: 30px;
+    /* background-color:rgba(255, 0, 25, .6); */
+    /* text-align: right; */
+    padding:0 30px;
+    box-sizing: border-box;
+    line-height: 30px;
+    display: none;
+    z-index: 3;
+}
+.swiperWrapper .spanList li{
+    width:10px;
+    height: 10px;
+    list-style: none;
+    display: inline-block;
+    border:1px solid black;
+    margin:0 3px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+}
+.swiperWrapper .Btn{
+    position: absolute;
+    top:calc(50% - 15px);
+    width:30px;
+    height: 30px;
+    background-color:white;
+    text-align:center;
+    line-height:30px;
+    cursor: pointer;
+    z-index: 3;
+}
+.swiperWrapper .left_Btn{
+    left: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.swiperWrapper .right_Btn{
+    right: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+   
+}
+

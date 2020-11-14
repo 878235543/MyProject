@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./download/font_fsrjiqaaa3t/iconfont.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        :root {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+        }
+
+        @media (min-width: 991.98px) {
+            .leftContent {
+                position: fixed;
+                left: 0px;
+            }
+        }
+
+        .leftTop {
+            height: 50%;
+            background-color: royalblue;
+        }
+
+        .leftBottom {
+            height: 50%;
+            background-color: saddlebrown;
+        }
+
+        .leftlistText {
+            font-size: 16px;
+        }
+
+        .myNavbar {
+            height: 80px;
+        }
+
+        @media (min-width: 991.98px) {
+            .leftLogin {
+                height: calc(100vh - 80px);
+            }
+        }
+
+        .leftLogin div div a {
+            font-size: 18px;
+        }
+
+        @media (max-width:576px) {
+            .leftH1 {
+                font-size: 22px;
+                margin: 20px 0;
+            }
+
+        }
+
+        @media (min-width: 576px) {
+            .mediaImg a {
+                width: 32%;
+                transition: all 0.2s cubic-bezier(0, 0, 1, 1);
+            }
+        }
+
+
+        .mediaImg a:hover {
+            /* box-shadow: -5px 5px 10px rgba(0, 0, 0, .5); */
+            transform: translateY(-4px);
+
+        }
+
+        /* .mediaImg a img{
+            width: 100%;
+        } */
+
+        .charText {
+            font-size: 16px;
+        }
+
+        @media (max-width: 991.98px) and (min-width: 875px) {
+            .charImg {
+                transform: translateY(-60px);
+            }
+        }
+
+        @media (min-width: 1300px) {
+            .charImg {
+                transform: translateY(-60px);
+            }
+        }
+
+        /* 星选卡 */
+        .starBg {
+            background-color: #f7f7f7;
+        }
+
+        .starTab {
+            margin: auto;
+            transition: all 0.3s;
+        }
+
+        .starTab:hover {
+            transform: translateY(-5px);
+            box-shadow: -5px 5px 10px rgba(0, 0, 0, .2);
+        }
+
+        .starTab img {
+            width: 150px;
+            height: 110px;
+            transform: translateY(-30px);
+        }
+
+        .starTab div p {
+            color: gray;
+        }
+
+        @media (min-width: 576px) {
+            .starPadding {
+                padding: 0 120px 0 120px;
+            }
+        }
+
+        @media (min-width: 576px) and (max-width: 700px) {
+            .starPadding {
+                padding: 0 3px 0 30px;
+            }
+        }
+
+        @media (min-width: 750px) and (max-width: 850px) {
+            .starPadding {
+                padding: 0 0px 0 0px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 940px) {
+            .starPadding {
+                padding: 0 70px 0 70px;
+            }
+        }
+
+        @media (min-width: 991.98px) and (max-width: 1300px) {
+            .starPadding {
+                padding: 0 0px 0 0px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .starPadding {
+                padding: 0 40px 0 40px;
+            }
+        }
+
+
+        /* 弹层 */
+        .Bulletlayer {
+            font-size: 18px;
+        }
+
+        .Bulletlayer ul li a {
+            color: black;
+            font-weight: 600;
+            line-height: 35px;
+        }
+
+        /* 条款 */
+        .Terms div {
+            color: #AAA;
+        }
+
+        .Terms div a {
+            font-size: 14px;
+            color: #AAA;
+            vertical-align: middle;
+        }
+
+
+        /* 底部导航栏 */
+        .navBottom{
+            height: 55px;
+            text-align: center;
+            font-size: 12px;
+           
+        }
+        .navBottom div a{
+            color: #222;
+        }
+        .iconfont{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row flex-row-reverse">
+            <!-- 左边 -->
+            <div class="col-lg-4 leftContent border-right">
+                <!-- 导航 -->
+                <div class="Switch1">
+                    <header class="myNavbar navbar d-none d-sm-flex px-0 px-lg-3 py-3 py-lg-4">
+                        <a href="#" class="navbar-brand">
+                            <img style="width: 36px;"
+                                src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/logo.svg" alt="">
+                        </a>
+
+                        <ul class="nav mr-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-dark font-weight-bold leftlistText">门店</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-dark font-weight-bold leftlistText">我的账户</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-dark font-weight-bold leftlistText">菜单</a>
+                            </li>
+                        </ul>
+
+                        <span class="btn iconfont icon-caidan SwitchBtn1"></span>
+                    </header>
+
+                    <div class="leftLogin d-flex justify-content-start justify-content-lg-center align-items-center">
+                        <div>
+                            <h1 class="leftH1"><strong> 心情惬意，来杯咖啡吧☕</strong></h1>
+                            <div class="d-none d-sm-block mt-lg-5 mt-3 mb-4">
+                                <a href="#" class="align-baseline">
+                                    <span class="iconfont icon-yonghu"></span>
+                                    <span class="text-success">登录</span>
+                                </a>
+                                <a href="#" class="align-middle ml-5 btn btn-success">注
+                                    册</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- 点击菜单要展示的内容 -->
+                <div class="Switch2">
+                    <header class="myNavbar navbar d-flex px-0 px-lg-3 py-3 py-lg-4">
+                        <a href="#" class="navbar-brand">
+                            <img style="width: 36px;"
+                                src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/logo.svg" alt="">
+                        </a>
+                        <!-- 关闭图标 -->
+                        <span class="btn closeBtn iconfont icon-qingchu SwitchBtn2"></span>
+                    </header>
+                    <div class="px-sm-5 pt-sm-4 Bulletlayer">
+                        <ul class="pl-sm-5">
+                            <li><a href="#">门店</a></li>
+                            <li><a href="#">星享俱乐部</a></li>
+                            <li><a href="#">菜单</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a href="#">星巴克移动应用</a></li>
+                            <li><a href="#">星礼卡</a></li>
+                            <li><a href="#">星巴克臻选</a></li>
+                            <li><a href="#">在线点，到店取</a></li>
+                            <li><a href="#">转心送</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a href="#">上海烘培工坊</a></li>
+                            <li><a href="#">关于星巴克</a></li>
+                            <li><a href="#">帮助中心</a></li>
+                            <div class="dropdown-divider"></div>
+                        </ul>
+                        <!-- 按钮 -->
+                        <div class="pl-sm-5 p-4">
+                            <a href="#" class="align-baseline">
+                                <span class="iconfont icon-yonghu"></span>
+                                <span class="text-success">登录</span>
+                            </a>
+                            <a href="#" class="align-middle ml-5 btn btn-success">注
+                                册</a>
+                        </div>
+
+                    </div>
+                    <footer class="pl-sm-5 py-4 Terms">
+                        <div class="pl-sm-5">
+                            <a href="#">English</a>&nbsp; | &nbsp;<a href="#">隐私政策</a>&nbsp; | &nbsp;<a
+                                href="#">使用条款</a>
+                        </div>
+                    </footer>
+                </div>
+                <!--  点击菜单要展示的内容end -->
+            </div>
+
+            <!-- 右边 -->
+            <div class="col-lg-8">
+
+                <!-- 轮播图start -->
+                <div id="carouselExampleIndicators" class="d-none d-sm-block carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/featured/club_upgrade/banner-SUM3-KV.jpg"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/featured/2020banner_video/mooncake-banner.jpg"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/featured/club_upgrade/banner.jpg"
+                                class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!-- 轮播图end -->
+                <!-- 轮播图2 -->
+                <div id="carouselExampleIndicators" class="d-sm-none carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/featured/2020banner_video/mooncake-banner-mobile.jpg"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/featured/club_upgrade/banner-SUM3-KV-mobile.jpg"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/featured/2020banner_video/mooncake-banner-mobile.jpg"
+                                class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!-- 轮播图2end -->
+
+
+
+                <!-- 图片组 -->
+                <div class="w-100 starBg">
+
+                    <div class="d-sm-flex justify-content-sm-between  w-100 border-success mediaImg ">
+                        <a class="py-4" href="#">
+                            <img class="w-100"
+                                src="https://www-static.chinacdn.starbucks.com.cn/prod/images/pages/tmall-2020-06-29-zh.jpg"
+                                alt="">
+                        </a>
+                        <a class="py-4" href="#">
+                            <img class="w-100"
+                                src="https://www-static.chinacdn.starbucks.com.cn/prod/images/pages/starbucks-design-studio-web-china.jpg"
+                                alt="">
+                        </a>
+                        <a class="py-4" href="#">
+                            <img class="w-100"
+                                src="https://www-static.chinacdn.starbucks.com.cn/prod/images/pages/homepage-career-cn.jpg"
+                                alt="">
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- 卡片 -->
+                <div class="w-100 bg-white text-center text-sm-left">
+                    <div class="d-sm-inline-block w-sm-100 py-5 px-5 align-baseline">
+                        <div>
+                            <h1>星享俱乐部</h1>
+                            <p class="mt-5 charText">开启您的星享之旅，星星越多、会员等级越高、好礼越丰富。了解更多 ›</p>
+                            <button class="btn btn-lg mt-4 btn-success border-success">注册</button>
+                            <button class="btn btn-lg  mt-4 btn-success border-success">登录</button>
+                        </div>
+                    </div>
+                    <div class="d-sm-inline-block py-5 px-5 align-middle">
+                        <img class="charImg"
+                            src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/logo-msr-new.svg"
+                            alt="">
+                    </div>
+                </div>
+
+
+
+                <!-- 4个卡片 -->
+                <div class="starBg py-5">
+                    <div class="text-center">
+                        <h1>星巴克精选</h1>
+                        <p>在星巴克天猫旗舰店发现更多咖啡心意</p>
+                    </div>
+                    <div class="row py-5 starPadding">
+                        <div class="col-md-3 col-6">
+                            <div class="card starTab" style="width: 16rem;">
+                                <img class="card-img-top"
+                                    src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/tmall-card-01.png"
+                                    alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">会员星礼包</h5>
+                                    <p class="card-text">星享卡新升级</p>
+                                    <p class="card-text">更多心意好礼</p>
+                                    <a href="#" class="">了解更多</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="card starTab" style="width: 16rem;">
+                                <img class="card-img-top"
+                                    src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/tmall-card-02.png"
+                                    alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">会员星礼包</h5>
+                                    <p class="card-text">星享卡新升级</p>
+                                    <p class="card-text">更多心意好礼</p>
+                                    <a href="#" class="">了解更多</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mt-5 mt-md-0">
+                            <div class="card starTab" style="width: 16rem;">
+                                <img class="card-img-top"
+                                    src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/tmall-eticket.png"
+                                    alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">会员星礼包</h5>
+                                    <p class="card-text">星享卡新升级</p>
+                                    <p class="card-text">更多心意好礼</p>
+                                    <a href="#" class="">了解更多</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6  mt-5 mt-md-0">
+                            <div class="card starTab" style="width: 16rem;">
+                                <img class="card-img-top"
+                                    src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/tmall-reserve.png"
+                                    alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">会员星礼包</h5>
+                                    <p class="card-text">星享卡新升级</p>
+                                    <p class="card-text">更多心意好礼</p>
+                                    <a href="#" class="">了解更多</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- 右边底部 -->
+
+        </div>
+        <!-- row底部 -->
+        <nav class="navbar d-flex d-sm-none navBottom  fixed-bottom navbar-light bg-light px-5">
+            <div>
+                <span class="d-block iconfont  icon-home"></span>
+                <a class="text-center d-block" href="#">主页</a>
+            </div>
+            <div>
+                <span class="d-block iconfont icon-8"></span>
+                <a class="text-center d-block" href="#">门店</a>
+            </div>
+            <div>
+                <span class="d-block iconfont icon-wodezhanghu"></span>
+                <a class="text-center d-block" href="#">我的账户</a>
+            </div>
+            <div>
+                <span class="d-block iconfont icon-weibiaoti1"></span>
+                <a class="text-center d-block" href="#">菜单</a>
+            </div>
+            <div>
+                <span class="d-block iconfont icon-gengduo"></span>
+                <a class="text-center d-block" href="#">更多</a>
+            </div>
+           
+            
+        </nav>
+    </div>
+
+</body>
+
+<script src="./jquery-3.4.1.min.js"></script>
+<script src="./bootstrap.bundle.min.js"></script>
+<script>
+    $('.carousel').carousel({
+        interval: 1000
+    })
+
+    var Switch1 = document.getElementsByClassName('Switch1')[0];
+    var Switch2 = document.getElementsByClassName('Switch2')[0];
+    var SwitchBtn1 = document.getElementsByClassName('SwitchBtn1')[0];
+    var SwitchBtn2 = document.getElementsByClassName('SwitchBtn2')[0];
+    SwitchBtn1.onclick = function () {
+        console.log('打开');
+        Switch1.style.display = 'none';
+        Switch2.style.display = 'block';
+    }
+    SwitchBtn2.onclick = function () {
+        console.log('关闭');
+        Switch1.style.display = 'block';
+        Switch2.style.display = 'none';
+    }
+</script>
+
+</html>

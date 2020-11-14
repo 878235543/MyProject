@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background-color: rgba(0,0,0,.7);
+        }
+        .wrapper{
+            width:500px;
+            height:350px;
+            border:1px solid rgba(0,0,0,.3);
+            margin:50px auto;
+            overflow: hidden;
+        }   
+        .wrapper .item{
+            /* position: absolute; */
+            display: block;
+            /* width:100%; */
+            height: 100%;
+            list-style: none;
+            float:left;
+        }
+        .wrapper .item img{
+            width: 100%;
+            height: 100%;
+        }
+        .wrapper .item.item1{
+            background-color:red;
+           
+        }
+        .wrapper .item.item2{
+            background-color:green;
+           
+        }
+        .wrapper .item.item3{
+            background-color:yellow;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <li class="item item1">
+            <img src="./图一.jpg" alt="">
+        </li>
+        <li class="item item2">
+            <img src="./图二.jpg" alt="">
+        </li>
+        <li class="item item3">
+            <img src="./图三.jpg" alt="">
+        </li>
+    </div>
+</body>
+<script src="./jquery-3.4.1.min.js"></script>
+<script src="./index.js"></script>
+<script>
+    /*
+        轮播的内容:   itemList:  
+        宽度:   width:
+        高度:   height:
+        轮播的方式: theway 无缝:  animation   淡入淡出 : fade
+        是否显示按钮:  buttion :   'show'   'hidden'  'hover'
+        是否显示小点点:  iSspan :  true,  false
+        小点的位置    iSspanPosition    :  左 left      右  right   居中  center
+        是否自动轮播  autoChange :  true   false
+        轮播时间    autoTime
+        小点的颜色 ： liColor 
+    */
+    $('.wrapper').Carousel({
+        itemList: $('.item'),
+        Width:500,
+        Height:350,
+        theawy:'animation',
+        buttion:'show',
+        iSspan:true,
+        iSspanPostition:'right',
+        autoChange:true,
+        autoTime:2000,
+        // liColor:'red'
+    });
+   
+</script>
+
+</html>

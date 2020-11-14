@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #cavs {
+            background-color: #000;
+        }
+
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="cavs"></canvas>
+    <script>
+        var cavs = document.getElementById('cavs');//获取画布
+        var ctx = cavs.getContext('2d');
+        var w = cavs.width = window.innerWidth;  //屏幕的宽
+        var h = cavs.height = window.innerHeight;  //屏幕的高
+        window.onresize=function(){
+            var w = (cavs.width = window.innerWidth);  //屏幕的宽
+            var h = (cavs.height = window.innerHeight);  //屏幕的高
+            console.log(w,h);
+        }
+        var count=30;
+         var RainArr=[];
+        function Rain(){//构造函数
+            
+        } 
+        Rain.prototype={
+            init:function(){       //初始化
+                this.x=random(1,w);//坐标x
+                this.y=0;//坐标y
+                this.r=1 //半径
+                this.ySpeet=random(2,7);//y的加速度
+                this.rSpeet=1;
+                this.t=1;//透明度
+                this.ts=0.96;//透明度系数
+                this.l=random(h*0.55,h*0.95);//掉落位置
+                this.Maxr=50;//最大半径
+            },
+            draw:function(){
+                if(this.y>this.l)
+                {
+                    ctx.beginPath();//开辟一个路径
+                    ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+                    // x,y 为圆心的坐标 r 半径 0 起点的度数 2*Math.PI为终点  
+                    //false表示顺时针的方向画//true表示以逆时针的方向画
+                   // ctx.strokeStyle = 'rgba(0,255,255,' + this.t + ')';
+                   ctx.strokeStyle = colorRandom(this.t);
+                    ctx.closePath();//闭合路径
+                    ctx.stroke();//开始绘制
+                }else{
+                    ctx.fillStyle = colorRandom(this.t); //黑色
+                    ctx.fillRect(this.x, this.y, 2, 10);
+                }
+                this.updeta();//坐标更新
+               
+            },
+            updeta:function(){
+                if (this.y > this.l) {
+                    //init.ronund();
+                if (this.t > 0.03) {
+                    this.r += this.rSpeet;
+                    if (this.r > this.Maxr) {
+                        this.t *= this.ts;
+                    }
+                } else {
+                    //return;
+                    this.init();//重新初始化
+                }
+               
+            }
+            else {
+                this.y += this.ySpeet;
+                //init.draw();
+            }
+            }
+        }
+        var one=new Rain();//生产一个雨滴
+        one.init();
+        function random(min,max){ //随机数
+            return Math.floor(Math.random()*(max-min)+min);
+        }
+         //开始运动
+         function move(){
+            ctx.fillStyle = "rgba(0,0,0,0.1)";
+            ctx.fillRect(0, 0, w, h); //先绘制
+             for(var i=0;i<RainArr.length;i++)
+             {
+                RainArr[i].draw();
+             }
+           
+           // one.draw();
+            window.requestAnimationFrame(move);
+         }
+         
+         function creatRain(){
+             for(var i=0;i<count;i++){
+                 (function(j){
+                     setTimeout(function(){
+                         var rain=new Rain();
+                         rain.init();
+                         RainArr.push(rain);
+                     },200);
+                 })(i);
+             }
+         }
+         creatRain();//创造有时间间隔的小雨滴对象
+         move();
+         function colorRandom(t){
+             var r=Math.floor(Math.random()*255);
+             var g=Math.floor(Math.random()*255);
+             var b=Math.floor(Math.random()*255);
+             return "rgba("+r+","+g+","+b+","+t+")";
+         }
+         console.log(colorRandom(this.t));
+
+        /*//画一个圆形
+        ctx.beginPath();//开辟一个路径
+        ctx.arc(200, 200, 50, 0, 2 * Math.PI, false);
+        // x,y 为圆心的坐标 r 半径 0 起点的度数 2*Math.PI为终点  
+        //false表示顺时针的方向画//true表示以逆时针的方向画
+        ctx.strokeStyle = "red";
+        ctx.closePath();//闭合路径
+        ctx.stroke();
+
+
+        //填充矩形
+        var init = {
+            y: 0,
+            x: 200,
+            r: 1,//半径
+            t: 1,//透明度
+            draw: function () {
+                ctx.fillStyle = "#fff";
+                ctx.fillRect(this.x, this.y, 2, 10);
+            },
+            ronund: function () {
+                ctx.beginPath();//开辟一个路径
+                ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+                // x,y 为圆心的坐标 r 半径 0 起点的度数 2*Math.PI为终点  
+                //false表示顺时针的方向画//true表示以逆时针的方向画
+                ctx.strokeStyle = 'rgba(0,225,255,' + this.t + ')';
+                ctx.closePath();//闭合路径
+                ctx.stroke();
+            }
+        }
+        var y = 0;
+        ctx.fillStyle = "#fff";
+        ctx.fillRect(400, y, 20, 50);
+
+        function move() {
+            ctx.fillStyle = "rgba(0,0,0,0.1)";
+            ctx.fillRect(0, 0, w, h); //先绘制
+
+            if (init.y > h - 150) {
+                if (init.t > 0.03) {
+                    init.r += 1;
+                    if (init.r > 50) {
+                        init.t *= 0.96;
+                    }
+                } else {
+                    return;
+                }
+                init.ronund();
+            }
+            else {
+                init.y += 2;
+                init.draw();
+            }
+            window.requestAnimationFrame(move); //动画帧
+
+        }*/
+
+
+
+    </script>
+</body>
+
+</html>

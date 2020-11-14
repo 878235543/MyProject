@@ -1,0 +1,79 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "99075",
+      "name": "杯子",
+      "font_class": "weibiaoti1",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "632976",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "1350131",
+      "name": "主页",
+      "font_class": "home",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "1518005",
+      "name": "左箭头",
+      "font_class": "zuojiantou",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "4349168",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "5285250",
+      "name": "清除",
+      "font_class": "qingchu",
+      "unicode": "e6f1",
+      "unicode_decimal": 59121
+    },
+    {
+      "icon_id": "9495499",
+      "name": "更多",
+      "font_class": "gengduo1",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "10056231",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e701",
+      "unicode_decimal": 59137
+    },
+    {
+      "icon_id": "10120003",
+      "name": "我的账户",
+      "font_class": "wodezhanghu",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "11125634",
+      "name": "门店",
+      "font_class": "8",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    }
+  ]
+}

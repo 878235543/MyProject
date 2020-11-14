@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color:rgba(0,0,0,.8);
+        }
+        .wrapper {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100%;
+            height: 200px;
+            background: url('./bg.jpg');
+            box-shadow: 0px 0px 10px black;
+        }
+
+        .wrapper .piano {
+            cursor: pointer;
+            border-radius: 3px;
+            box-sizing: border-box;
+            word-break: break-all;
+
+        }
+
+        .wrapper .white {
+            position: absolute;
+            /* left: 0; */
+
+            /* width: 30px; */
+            height: 100%;
+            background-color: white;
+            border: 1px solid #00000044;
+            z-index: 1;
+        }
+
+        .wrapper .white span {
+            position: absolute;
+            bottom: 5px;
+            text-align: center;
+            width: 100%;
+
+        }
+
+        .wrapper .black {
+            position: absolute;
+            width: 20px;
+            height: 60%;
+            background-color: #444;
+            border: 1px solid #00000088;
+            /* left: 20px; */
+            z-index: 2;
+        }
+
+        .wrapper .black span {
+            width: 100%;
+            position: absolute;
+            bottom: 3px;
+            text-align: center;
+        }
+        .active{
+            box-shadow: 0px 0px 10px black inset;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- <div class="piano white active">
+            <span>A1</span>
+        </div>
+        <div class="piano black active">
+            <span>sdf</span>
+        </div> -->
+    </div>
+</body>
+<script src="./audio.js"></script>
+<script src="./index.js"></script>
+<script>
+   Piano.init();
+   window.onselectstart = function(){
+       return false;   //不会选中文字
+   }
+   window.onresize = function(){
+       location.reload();
+   }
+
+</script>
+
+</html>
