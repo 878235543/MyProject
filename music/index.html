@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./download/font_4kfv1z51mu/iconfont.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav>
+            <div class="headerLeft">
+                <div class="logo">Logo</div>
+                <div class="navList">
+                    <li>音乐馆</li>
+                    <li>音乐馆</li>
+                    <li>音乐馆</li>
+                </div>
+            </div>
+            <div class="headerRight">
+                <div class="search">
+                    <input type="text" placeholder="请输入关键字">
+                    <span class="iconfont icon-sousuo"></span>
+                </div>
+                <div class="Signin">
+                    <span>登录</span>
+                    <li>ssssss</li>
+                </div>
+            </div>
+        </nav>
+        <div class="SigninPage">
+            <!-- 登入 -->
+            <div class="LogIn">
+                <h4>手机号登入</h4>
+                <span class="close">X</span>
+                <form action="" id="LogIn">
+                    <input type="text" name="phone" placeholder="请输入手机号">
+                    <input type="password" name="password" placeholder="请输入密码">
+                    <input id="LogInSubmit" type="submit" value="登录">
+                    <span>还没有账号?注册></span>
+                </form>
+            </div>
+            <!-- 注册 -->
+            <div class="registered">
+                <h4>手机号注册/修改密码</h4>
+                <span class="close">X</span>
+                <form action="" id="registered">
+                    <input type="text" name="nickname" placeholder="请输入昵称">
+                    <input type="text" name="phone" placeholder="请输入手机号">
+                    <input type="password" name="password" placeholder="请输入密码">
+                    <input type="text" name="VerificationCode" placeholder="请输入验证码">
+                    <span>发送验证码</span>
+                    <input type="submit" value="注册/修改密码">
+                    <span>登录></span>
+                </form>
+            </div>
+            <!-- 验证码 -->
+            <!-- <div class="Verification">
+                <h4>手机验证码</h4>
+                <span class="close">X</span>
+                <form action="" id="VerificationForm">
+                    <span>请输入验证码</span>
+                    <input id="Verification" type="text" maxlength="4" placeholder="">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <input type="submit" value="验证">
+                    <span>登录></span>
+                </form>
+            </div> -->
+        </div>
+    </header>
+    <div id='content' class="content">
+        <div class="Carousel">
+            <div class="Img">
+                <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2061811912,1111807927&fm=26&gp=0.jpg"
+                    alt="">
+                <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3336323716,1958456348&fm=26&gp=0.jpg"
+                    alt="">
+                <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=586491970,2382564050&fm=15&gp=0.jpg"
+                    alt="">
+            </div>
+            <div class="Btns">
+                <div class="prev">&lt;</div>
+                <div class="next">&gt;</div>
+            </div>
+            <div class="point">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- 推荐歌曲 -->
+        <div class="MusicS">
+            <!-- 左边 -->
+            <div class="MusicSLeft">
+                <!-- 歌曲分类 -->
+                <div class="MusicSClassification">
+                    <div class="ClassificationList">
+                        <!-- 分类导航 -->
+                        <div class="listLeft">
+                            <li>推荐歌单</li>
+                        </div>
+                        <div class="listRight">
+                            <li>更多></li>
+                        </div>
+                    </div>
+                    <div class="ClassificationContent">
+                        <!-- 分类内容区 -->
+                    </div>
+                </div>
+                <!-- 推荐MV -->
+                <div class="RecommendMV">
+                    <div class="RecommendMVList">
+                        <!-- 分类导航 -->
+                        <div class="listLeft">
+                            <li>推荐MV</li>
+                        </div>
+                        <div class="listRight">
+                            <li>更多></li>
+                        </div>
+                    </div>
+                    <div class="RecommendMVContent">
+                        <!-- MV分类内容区 -->
+                    </div>
+                </div>
+                <!-- 每日推荐  -->
+                <div class="DailyRecommendation">
+                    <div class="Title">推荐新音乐</div>
+                    <div class="newmusicLi"></div>
+                </div>
+            </div>
+            <!-- 右边 -->
+            <div class="MusicSRight">
+                <!-- 用户详情 -->
+                <div class="UserDetails"></div>
+                <div class="PopularSinger">
+                    <div class="Title">
+                        <h2>热门歌手</h2>
+                        <span>更多</span>
+                    </div>
+                    <div class="PopularSingerWrapper"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 歌曲全部分类 -->
+    <div id="AllCategories" class="AllCategories">
+        <!-- 返回主页 -->
+        <div class="returnHomePage">
+            <span class="iconfont icon-ai207"></span>
+        </div>
+        <!-- 分类列表按钮 -->
+        <div class="AllCategoriesList"></div>
+        <!-- 分类按钮内容区 -->
+        <div class="AllCategoriesContent"></div>
+        <!-- 翻页插件 -->
+        <hr>
+        <div class="Turnpage"></div>
+    </div>
+    <!-- 歌单分类详情 -->
+    <div id="SongClassificationDetails" class="SongClassificationDetails"></div>
+    <!-- 歌曲详情 -->
+    <div id="SongDetails" class="SongDetails"></div>
+    <!-- 单曲详情播放页面 -->
+    <div id="SinglePlay" class="SinglePlay">
+        <!-- 歌曲介绍 SingleIntroduction-->
+        <div class="SingleIntroduction"></div>
+        <!-- 歌词 SingleLyrics-->
+        <div class="SingleLyrics"></div>
+        <!-- 歌曲评论 SingleComment-->
+        <div class="SingleComment"></div>
+    </div>
+    <!-- MV全部分类 -->
+    <div id='AllCategoriesMv' class="AllCategoriesMV">
+        <div class="MvreturnContent">
+            <span class="iconfont icon-ai207"></span>
+        </div>
+        <div class="AllCategoriesMVList">
+            <li class="AllList">全部</li>
+            <li class="AllList">内地</li>
+            <li class="AllList">港台</li>
+            <li class="AllList">欧美</li>
+            <li class="AllList">日本</li>
+            <li class="AllList">韩国</li>
+            <li class="upToDateMV">最新MV</li>
+            <li class="ProducedbyNetEase">网易出品MV</li>
+            <li class="RankingMv">MV排行</li>
+        </div>
+        <div class="AllMvContent"></div>
+        <div class="AllMvContentPage">
+            <div class="Turnpage"></div>
+        </div>
+    </div>
+    <!-- MV播放页面 -->
+    <div id="MvPlay" class="MvPlay">
+        <!-- MV介绍 -->
+        <div class="MvIntroduction"></div>
+        <!-- MV播放视频 -->
+        <div class="MvVideo"></div>
+        <!-- MV评论 -->
+        <div class="MvComment"></div>
+    </div>
+    <!-- 所有歌手分类页 -->
+    <div id="SingerCategory" class="SingerCategory">
+        <div class="SingerCategoryLeft">
+            <dl>
+                <dt>华语</dt>
+                <dd>华语男歌手</dd>
+                <dd>华语女歌手</dd>
+                <dd>华语组合/乐队</dd>
+            </dl>
+            <dl>
+                <dt>欧美</dt>
+                <dd>欧美男歌手</dd>
+                <dd>欧美女歌手</dd>
+                <dd>欧美组合/乐队</dd>
+            </dl>
+            <dl>
+                <dt>日本</dt>
+                <dd>日本男歌手</dd>
+                <dd>日本女歌手</dd>
+                <dd>日本组合/乐队</dd>
+            </dl>
+            <dl>
+                <dt>韩国</dt>
+                <dd>韩国男歌手</dd>
+                <dd>韩国女歌手</dd>
+                <dd>韩国组合/乐队</dd>
+            </dl>
+            <dl>
+                <dt>其他</dt>
+                <dd>其他男歌手</dd>
+                <dd>其他女歌手</dd>
+                <dd>其他组合/乐队</dd>
+            </dl>
+
+        </div>
+        <div class="SingerCategoryRight">
+            <div class="LetterCategory">
+                <li id='-1'>热门</li>
+                <li id='a'>A</li>
+                <li id='b'>B</li>
+                <li id='c'>C</li>
+                <li id='d'>D</li>
+                <li id='e'>E</li>
+                <li id='f'>F</li>
+                <li id='g'>G</li>
+                <li id='h'>H</li>
+                <li id='i'>I</li>
+                <li id='j'>J</li>
+                <li id='k'>K</li>
+                <li id='l'>L</li>
+                <li id='m'>M</li>
+                <li id='n'>N</li>
+                <li id='o'>O</li>
+                <li id='p'>P</li>
+                <li id='q'>Q</li>
+                <li id='r'>R</li>
+                <li id='s'>S</li>
+                <li id='t'>T</li>
+                <li id='u'>U</li>
+                <li id='v'>V</li>
+                <li id='w'>W</li>
+                <li id='x'>X</li>
+                <li id='y'>Y</li>
+                <li id='z'>Z</li>
+                <li id='0'>其他</li>
+            </div>
+            <div class="SingerCategoryRightContent"></div>
+            <div class="SingerCategoryRightPage"></div>
+        </div>
+    </div>
+    <!-- 歌手详情页 -->
+    <div id="SingerHomepage" class="SingerHomepage">
+        <div class="ImgName"></div>
+        <div class="contentList">
+            <li>热门作品</li>
+            <li>所有专辑</li>
+            <li>相关MV</li>
+            <li>艺人介绍</li>
+        </div>
+        <div class="SingerHomepageContent"></div>
+    </div>
+    <!-- searchList -->
+    <div id='searchList' class="searchList">
+        <div class="searchListName">
+            <span class="SongName">歌名</span>
+            <span></span>
+            <span>时长</span>
+            <span>歌手</span>
+            <span>专辑</span>
+        </div>
+        <div class="searchListContent"></div>
+    </div>
+    <footer></footer>
+</body>
+<!-- <script src="./index.js" type="module"></script> -->
+<script src="./main.js"></script>
+</html>
